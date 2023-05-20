@@ -22,7 +22,7 @@ public class Analizer {
                         @Override
                         public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                             long size = Files.size(file);
-                            updateDirSize(path, size);
+                            updateDirSize(file, size);
 
                             return FileVisitResult.CONTINUE;
                         }
